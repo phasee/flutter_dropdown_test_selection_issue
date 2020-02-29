@@ -11,6 +11,7 @@ main() {
 
   setUp(() {
     model = MockModel();
+    when(model.updateSelection(any)).thenThrow('ERROR');
   });
 
   testWidgets('Test dropdown menu item selection', (WidgetTester tester) async {

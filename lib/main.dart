@@ -12,8 +12,14 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int selectedValue = 0;
+  int selectedValue;
   final values = [0, 1, 2, 3];
+
+  @override
+  void initState() { 
+    super.initState();
+    selectedValue = 0;
+  }
 
   Model get model => widget.model;
 
